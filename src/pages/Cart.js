@@ -54,28 +54,28 @@ const Cart = () => {
 
   const handlePurchase = (e) => {
     e.preventDefault();
-    if (isLoggedIn) {
-      cartServices
-        .create(cart)
-        .then((res) => {
-          cartDetails.cart_id = res.id;
-          cartItems.forEach((item) => {
-            cartDetails.product_id = item.id;
-            cartDetails.quantity = item.quantity;
-            cartDetails.price = item.price;
-            cartDetailServices.create(cartDetails);
-          });
+//     if (isLoggedIn) {
+//       cartServices
+//         .create(cart)
+//         .then((res) => {
+//           cartDetails.cart_id = res.id;
+//           cartItems.forEach((item) => {
+//             cartDetails.product_id = item.id;
+//             cartDetails.quantity = item.quantity;
+//             cartDetails.price = item.price;
+//             cartDetailServices.create(cartDetails);
+//           });
           dispatch(clearCart());
           toast.success("Purchase complete!");
           navigate("/purchase");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else {
-      toast.error("Please login to purchase!");
-      navigate("/login");
-    }
+//         })
+//         .catch((err) => {
+//           console.log(err);
+//         });
+//     } else {
+//       toast.error("Please login to purchase!");
+//       navigate("/login");
+//     }
   };
 
   return (
