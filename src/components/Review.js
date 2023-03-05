@@ -28,7 +28,7 @@ const Review = () => {
           <div key={index} className="user-rate">
             <div className="user-info">
               <div className="user-avt">
-                <img src={'http://localhost/doge-shop-api/public/images/doge.png'} alt="avt" />
+                <img src={'https://doge-shop.000webhostapp.com/public/images/doge.png'} alt="avt" />
               </div>
               <div className="user-name">
                 <span className="name">{comment.name}</span>
